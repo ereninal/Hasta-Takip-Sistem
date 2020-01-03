@@ -1,0 +1,10 @@
+use SaglikOcagi
+go
+drop PROCEDURE if EXISTS Sayi
+go
+
+CREATE PROCEDURE Sayi 
+AS
+BEGIN
+    SELECT COUNT(*) from KULLANICI
+END

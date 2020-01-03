@@ -1,0 +1,15 @@
+use SaglikOcagi
+GO
+
+drop PROCEDURE IF EXISTS DosyaNoAra
+GO
+
+CREATE PROCEDURE DosyaNoAra(
+
+    @DOSYA_NO NVARCHAR(11)
+    
+)
+AS
+BEGIN
+    SELECT * FROM HASTA WHERE  HASTA.DOSYA_NO LIKE '%'+@DOSYA_NO +'%' 
+END

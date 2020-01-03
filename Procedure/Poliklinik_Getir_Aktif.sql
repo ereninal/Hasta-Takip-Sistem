@@ -1,0 +1,14 @@
+use SaglikOcagi
+GO
+drop PROCEDURE if EXISTS PoliklinikGetirAktif
+go
+
+CREATE PROCEDURE PoliklinikGetirAktif(
+
+    @POLIKLINIK_AD NVARCHAR(25)
+)
+AS
+BEGIN
+    SELECT * FROM POLIKLINIK
+    WHERE DURUM = 'AKTİF'
+END

@@ -1,0 +1,15 @@
+use SaglikOcagi
+GO
+
+drop PROCEDURE IF EXISTS KurumSicilNoAra
+GO
+
+CREATE PROCEDURE KurumSicilNoAra(
+
+    @SICIL_NO NVARCHAR(20)
+    
+)
+AS
+BEGIN
+    SELECT * FROM HASTA WHERE  HASTA.KURUM_SICIL_NO LIKE '%'+@SICIL_NO +'%' 
+END

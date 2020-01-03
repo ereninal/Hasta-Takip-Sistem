@@ -1,0 +1,15 @@
+use SaglikOcagi
+go
+
+drop PROCEDURE if EXISTS IslemGetir
+GO
+
+CREATE PROCEDURE IslemGetir(
+
+    @ISLEM_AD NVARCHAR(30)
+)
+AS
+BEGIN
+    SELECT * FROM ISLEM 
+    WHERE (@ISLEM_AD IS NULL OR ISLEM_ADI=@ISLEM_AD)
+END

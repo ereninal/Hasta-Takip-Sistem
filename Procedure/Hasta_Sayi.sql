@@ -1,0 +1,10 @@
+use SaglikOcagi
+GO
+drop PROCEDURE if EXISTS HastaSayi
+go
+
+CREATE PROCEDURE HastaSayi
+AS
+BEGIN
+    SELECT COUNT(*) FROM HASTA
+END

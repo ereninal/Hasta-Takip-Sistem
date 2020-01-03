@@ -1,0 +1,16 @@
+use SaglikOcagi
+go
+
+drop PROCEDURE if EXISTS  OncekiIslemGetir
+go
+
+CREATE PROCEDURE OncekiIslemGetir(
+
+    @HASTA_DOSYA_NO NVARCHAR(5),
+    @DURUM NVARCHAR(5)
+
+)
+AS
+BEGIN
+    SELECT * FROM SEVK where DOSYA_NO = @HASTA_DOSYA_NO AND TABURCU = @DURUM
+end
